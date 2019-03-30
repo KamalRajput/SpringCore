@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="scores" class="com.Kamal.Spring.SpringCoreRefTypes.Scores" p:physics="90" p:maths="100" p:chemistry="85"/>
+	  <bean name="student" class="com.Kamal.Spring.SpringCoreRefTypes.Student" p:scores-ref="scores">
+	
+	<!-- 1. <ref bean="scores"/>
+	 </property> can be used this way also  
+	 2. <property name="scores" ref="scores"/>
+	 
+	 3.	 Also it can be done using p schema names
+	 <bean name="student" class="com.Kamal.Spring.SpringCoreRefTypes.Student" p:scores-ref="scores">
+	 p:scores-ref : private Scores scores;
+	 -->
+	 
+
+	</bean>
+
+
+</beans>

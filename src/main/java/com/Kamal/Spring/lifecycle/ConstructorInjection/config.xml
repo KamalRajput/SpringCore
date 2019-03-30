@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- We can use c namespace also to do constructor injection -->
+	<bean class="com.Kamal.Spring.lifecycle.ConstructorInjection.Address"
+		name="address" p:hno="1230" p:city="Noida" p:street="C-block Street" />
+
+	<bean class="com.Kamal.Spring.lifecycle.ConstructorInjection.Employee"
+		name="employee" c:id="123" c:address-ref="address">
+		
+		<!-- 
+		<constructor-arg value="123" />
+		<constructor-arg ref="address" />
+ -->
+	</bean>
+
+
+</beans>
